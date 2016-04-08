@@ -4,7 +4,7 @@ var path = require('path'),
     webpack = require('webpack'),
     pkg = require('./package.json');
 
-var config = {
+module.exports = {
   devtool: 'eval',
   // devtool: 'cheap-module-eval-source-map',
   entry: {
@@ -47,5 +47,3 @@ var config = {
     // new webpack.NoErrorsPlugin()
   ]
 };
-
-module.exports = config;

@@ -1,5 +1,16 @@
 ## Hello React with webpack
 
+This is just my personal boilerplate, it may or may not be a good fit for your project(s).
+
+### Contains:
+
+- [x] Babel
+- [x] Webpack with hot-loader
+- [x] React
+- [x] Jest
+
+<hr/>
+
 #### Using webpack to bundle scripts
 
 ```
@@ -20,4 +31,12 @@ npm run build
 
 ```
 npm run dev
+```
+http://localhost:8888/
+
+
+#### Unit Testing
+
+```
+npm run test
 ```
