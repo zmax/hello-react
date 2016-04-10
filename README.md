@@ -38,5 +38,5 @@ http://localhost:8888/
 #### Unit Testing
 
 ```
-npm run test
+npm test
 ```

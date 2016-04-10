@@ -44,6 +44,6 @@ module.exports = {
     // 等同於在 webpack-dev-server 的 --hot 參數
     new webpack.HotModuleReplacementPlugin(),
     // 若有語法錯誤時不重新整理瀏覽器
-    // new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin()
   ]
 };
