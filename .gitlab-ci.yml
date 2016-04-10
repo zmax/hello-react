@@ -1,16 +1,10 @@
-image: node:4.4
+image: node:4.2.2
 
 cache:
   paths:
   - node_modules/
 
-stages:
-  - test
-
-test_async:
-  stage: test
+all_tests:
   script:
    - npm install
    - npm test
-  tags:
-    - docker
