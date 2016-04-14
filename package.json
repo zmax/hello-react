@@ -4,7 +4,7 @@
   "description": "Hello React with webpack, a starter project.",
   "main": "src/app.js",
   "scripts": {
-    "build": "webpack --progress --colors",
+    "build": "webpack --progress --colors --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --progress --colors --port 8888",
     "test": "jest"
   },
@@ -41,7 +41,7 @@
     "react-dom": "^15.0.0"
   },
   "devDependencies": {
-    "webpack": "^1.12.14",
+    "webpack": "^1.12.15",
     "webpack-dev-server": "^1.14.1",
     "babel-core": "^6.7.5",
     "babel-jest": "^10.0.1",

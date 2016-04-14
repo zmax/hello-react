@@ -32,10 +32,13 @@ npm run build
 ```
 npm run dev
 ```
-http://localhost:8888/
+
+Then, open your browser on `http://localhost:8888/`
 
 
 #### Unit Testing
+
+Dependencies: `jest-cli babl-polyfill react-addons-test-utils`
 
 ```
 npm test

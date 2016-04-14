@@ -10,9 +10,19 @@ describe('HelloWorld', () => {
   beforeEach(() => {
     component = TestUtils.renderIntoDocument(<HelloWorld />);
   });
+
   it('has content equal Hello World!!', () => {
     let componentNode = ReactDOM.findDOMNode(component);
-    expect(componentNode.textContent).toContain('Hello World!!');
     expect(componentNode.textContent).toEqual('Hello World!!');
   });
+
+  it('can click and will change content.', () => {
+    TestUtils.Simulate.click(
+      TestUtils.findRenderedDOMComponentWithTag(component, 'div')
+    );
+    let componentNode = ReactDOM.findDOMNode(component);
+      expect(componentNode.textContent).toContain('(clicked)');
+      // expect(componentNode.textContent).toEqual('Hello World!! (clicked)');
+  });
+
 });
