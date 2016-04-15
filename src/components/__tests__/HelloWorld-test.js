@@ -6,23 +6,22 @@ import TestUtils from 'react-addons-test-utils';
 import HelloWorld from '../HelloWorld';
 
 describe('<HelloWorld />', () => {
-  let component;
-  beforeEach(() => {
-    component = TestUtils.renderIntoDocument(<HelloWorld />);
-  });
+
+  // beforeEach(() => {
+  // });
 
   it('has content equal Hello World!!', () => {
-    let componentNode = ReactDOM.findDOMNode(component);
+    let component, componentNode;
+    component = TestUtils.renderIntoDocument(<HelloWorld />);
+    componentNode = ReactDOM.findDOMNode(component);
     expect(componentNode.textContent).toEqual('Hello World!!');
   });
 
-  it('can click and will change content.', () => {
-    TestUtils.Simulate.click(
-      TestUtils.findRenderedDOMComponentWithTag(component, 'div')
-    );
-    let componentNode = ReactDOM.findDOMNode(component);
-      expect(componentNode.textContent).toContain('(clicked)');
-      // expect(componentNode.textContent).toEqual('Hello World!! (clicked)');
+  it('can assign a title prop', ()=>{
+    let component, componentNode;
+    component = TestUtils.renderIntoDocument(<HelloWorld title="Starck"/>);
+    componentNode = ReactDOM.findDOMNode(component);
+    expect(componentNode.textContent).toEqual('Hello World!! Starck');
   });
 
 });

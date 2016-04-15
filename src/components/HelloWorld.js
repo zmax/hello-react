@@ -4,15 +4,23 @@ export default class HelloWorld extends Component {
   constructor(props) {
     super(props);
     // default state
-    this.state = { isClicked: false };
+    this.state = {};
   }
-  onMouseClick(e) {
-    this.setState({ isClicked: true });
+  hasTitle() {
+    return this.props.title !== '';
+  }
+  getTitle(prefix) {
+    return prefix + this.props.title;
   }
   render() {
-    let additionMessage = this.state.isClicked ? ' (clicked)' : '';
+    let title = this.hasTitle()? this.getTitle(' ') : '';
     return (
-      <div onClick={(e)=>this.onMouseClick(e)}>Hello World!!{additionMessage}</div>
+      <span>Hello World!!{title}</span>
     );
   }
 }
+
+// default props
+HelloWorld.defaultProps = {
+  title: ''
+};

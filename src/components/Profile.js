@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import request from '../helpers/request';
+import request from '../utils/request';
 
 export default class Profile extends Component {
   constructor(props) {
