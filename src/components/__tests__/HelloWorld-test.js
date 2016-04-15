@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import HelloWorld from '../HelloWorld';
 
-describe('HelloWorld', () => {
+describe('<HelloWorld />', () => {
   let component;
   beforeEach(() => {
     component = TestUtils.renderIntoDocument(<HelloWorld />);

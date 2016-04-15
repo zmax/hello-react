@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --progress --colors --port 8888",
-    "test": "jest"
+    "test": "jest --verbose"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
