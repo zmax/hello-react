@@ -1,8 +1,10 @@
 jest.unmock('../HelloWorld');
+jest.unmock('../HelloWorld/HelloWorld');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
+
 import HelloWorld from '../HelloWorld';
 
 describe('<HelloWorld />', () => {

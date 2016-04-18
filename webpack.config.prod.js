@@ -2,7 +2,8 @@
 
 var path = require('path'),
     webpack = require('webpack'),
-    pkg = require('./package.json');
+    pkg = require('./package.json'),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var config = {
   devtool: 'source-map',
@@ -21,7 +22,8 @@ var config = {
       compressor: {
         warnings: false
       }
-    })
+    }),
+    new ExtractTextPlugin("app.css")
   ]
 };
 

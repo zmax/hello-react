@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import './hello-world.scss';
+
 export default class HelloWorld extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ export default class HelloWorld extends Component {
   render() {
     let title = this.hasTitle()? this.getTitle(' ') : '';
     return (
-      <span>Hello World!!{title}</span>
+      <span className="hello-world">Hello World!!{title}</span>
     );
   }
 }

@@ -26,7 +26,8 @@ describe('<LikeButton />', () => {
     TestUtils.Simulate.click(
       TestUtils.findRenderedDOMComponentWithTag(component, 'div')
     );
-    console.log(componentNode.classList.contains('btn'));
+    // console.log(componentNode.classList.contains('btn'));    
+    // expect(componentNode.classList.contains('btn')).toBe(true);
     expect(componentNode.textContent).toEqual('Like');
   });
 });

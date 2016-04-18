@@ -1,6 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloWorld from './components/HelloWorld'
+import HelloWorld from './components/HelloWorld';
+import LikeButton from 'components/LikeButton';
+import Profile from 'components/Profile';
 
-ReactDOM.render(<HelloWorld />, document.getElementById('app'));
+import './app.scss';
+
+ReactDOM.render(
+  <div>
+    <HelloWorld />
+    {/*<br/><hr/>*/}
+    {/*<Profile userId="3" />*/}
+    <br/><hr/>
+    <LikeButton />
+  </div>
+, document.getElementById('app'));

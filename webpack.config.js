@@ -2,7 +2,8 @@
 
 var path = require('path'),
     webpack = require('webpack'),
-    pkg = require('./package.json');
+    pkg = require('./package.json'),
+    ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   devtool: 'eval',
@@ -19,6 +20,9 @@ module.exports = {
     vendors: ['react']
   },
   resolve: {
+    root: [
+      path.resolve(__dirname, 'src'),      
+    ],
     alias: {
       components: path.resolve(__dirname, 'src/components/'),
       utils: path.resolve(__dirname, 'src/utils/'),
@@ -33,11 +37,19 @@ module.exports = {
     publicPath: '/dist/'
   },
   module: {
-    loaders: [{
-      test: /\.jsx?$/,  // 用正則來匹配文件路徑，這段意思是匹配 js 或者 jsx
-      loader: 'babel',  // 加載模塊 "babel" 是 "babel-loader" 的縮寫
-      include: path.join(__dirname, 'src')
-    }]
+    loaders: [
+      {
+        test: /\.jsx?$/,  // 用正則來匹配文件路徑，這段意思是匹配 js 或者 jsx
+        loader: 'babel',  // 加載模塊 "babel" 是 "babel-loader" 的縮寫
+        include: path.join(__dirname, 'src')
+      },
+      {
+        test: /\.scss$/,
+        // loader: 'style!css!sass',
+        loader: ExtractTextPlugin.extract("style", "css!sass"),
+        include: path.join(__dirname, 'src')
+      }
+    ]
   },
   plugins: [
     // 分離主程式與第三方函式庫
@@ -45,6 +57,7 @@ module.exports = {
     // 等同於在 webpack-dev-server 的 --hot 參數
     new webpack.HotModuleReplacementPlugin(),
     // 若有語法錯誤時不重新整理瀏覽器
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new ExtractTextPlugin("app.css")
   ]
 };

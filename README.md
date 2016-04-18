@@ -8,6 +8,8 @@ This is just my personal boilerplate, it may or may not be a good fit for your p
 - [x] Webpack with hot-loader
 - [x] React
 - [x] Jest
+- [x] Style loader (Sass)
+- [ ] Enzyme or teaspoon
 
 <hr/>
 
@@ -18,7 +20,7 @@ npm install
 
 # or
 
-npm install --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-react babel-preset-es2015
+npm install --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-react babel-preset-es2015 style-loader css-loader  node-sass sass-loader extract-text-webpack-plugin
 ```
 
 #### Build scripts
