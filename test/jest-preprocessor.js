@@ -9,7 +9,7 @@ module.exports = {
     if (filename.indexOf('node_modules') === -1) {
 			src = babelJest.process(src, filename)
 			    .replace(/require\(\s*\'[a-zA-Z0-9\/\.\_\-\!]*\.(css|scss|less)\'\);/gm, '');
-      // src = webpackAlias.process(src, filename);
+      // src = webpackAlias.process(src, filename);			
     }
     return src;
 	}

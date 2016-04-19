@@ -1,5 +1,5 @@
 jest.unmock('../HelloWorld');
-jest.unmock('../HelloWorld/HelloWorld');
+// jest.unmock('../HelloWorld/HelloWorld');
 
 import React from 'react';
 import ReactDOM from 'react-dom';

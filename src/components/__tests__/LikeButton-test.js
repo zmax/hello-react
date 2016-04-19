@@ -22,6 +22,7 @@ describe('<LikeButton />', () => {
     //   TestUtils.findRenderedDOMComponentWithTag(component, 'div')
     // );
     // expect(componentNode.textContent).toContain('Unlike');
+
     expect(wrapper.text()).toContain('Like');
     expect(wrapper.find('div.btn').length).toEqual(1);
     expect(wrapper.find('div.btn-primary').length).toEqual(0);
@@ -37,9 +38,10 @@ describe('<LikeButton />', () => {
     // TestUtils.Simulate.click(
     //   TestUtils.findRenderedDOMComponentWithTag(component, 'div')
     // );
-    // // console.log(componentNode.classList.contains('btn'));
-    // // expect(componentNode.classList.contains('btn')).toBe(true);
+    // console.log(componentNode.classList.contains('btn'));
+    // expect(componentNode.classList.contains('btn')).toBe(true);
     // expect(componentNode.textContent).toEqual('Like');
+
     expect(wrapper.text()).toContain('Like');
     wrapper.simulate('click');
     expect(wrapper.text()).toContain('Unlike');
