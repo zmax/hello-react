@@ -9,7 +9,7 @@ This is just my personal boilerplate, it may or may not be a good fit for your p
 - [x] React
 - [x] Jest
 - [x] Style loader (Sass)
-- [ ] Enzyme or teaspoon
+- [x] Enzyme <del>or teaspoon</del>
 
 <hr/>
 
@@ -17,9 +17,9 @@ This is just my personal boilerplate, it may or may not be a good fit for your p
 
 ```
 npm install
-
-# or
-
+```
+or
+```
 npm install --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-react babel-preset-es2015 style-loader css-loader  node-sass sass-loader extract-text-webpack-plugin
 ```
 
@@ -40,7 +40,7 @@ Then, open your browser on `http://localhost:8888/`
 
 #### Unit Testing
 
-Dependencies: `jest-cli babl-polyfill react-addons-test-utils`
+Dependencies: `jest-cli babl-polyfill react-addons-test-utils enzyme sinon`
 
 ```
 npm test

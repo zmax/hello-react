@@ -6,14 +6,18 @@
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.prod.js",
     "dev": "webpack-dev-server --open --progress --colors --port 8888",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "testnc": "jest --no-cache"
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/test/jest-preprocessor",
     "unmockedModulePathPatterns": [
       "<rootDir>/node_modules/react",
       "<rootDir>/node_modules/react-dom",
-      "<rootDir>/node_modules/react-addons-test-utils"
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/classnames",
+      "<rootDir>/node_modules/enzyme",
+      "<rootDir>/node_modules/sinon"
     ]
   },
   "repository": {
@@ -47,14 +51,15 @@
     "babel-preset-react": "^6.5.0",
     "classnames": "^2.2.3",
     "css-loader": "^0.23.1",
+    "enzyme": "^2.2.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "jest-cli": "^0.10.2",
-    "jest-webpack-alias": "^2.2.0",
     "node-sass": "^3.4.2",
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.0.1",
     "react-dom": "^15.0.1",
     "sass-loader": "^3.2.0",
+    "sinon": "^1.17.3",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",

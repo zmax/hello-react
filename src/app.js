@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from 'components/HelloWorld';
 import LikeButton from 'components/LikeButton';
 import Profile from 'components/Profile';
 
