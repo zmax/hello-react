@@ -21,10 +21,13 @@ module.exports = {
   },
   resolve: {
     root: [
-      path.resolve(__dirname, 'src'),      
+      path.resolve(__dirname, 'src'),
     ],
     alias: {
+      actions: path.resolve(__dirname, 'src/actions/'),
       components: path.resolve(__dirname, 'src/components/'),
+      containers: path.resolve(__dirname, 'src/containers/'),
+      reducers: path.resolve(__dirname, 'src/reducers/'),
       utils: path.resolve(__dirname, 'src/utils/'),
     },
     extensions: ['', '.js', '.jsx']

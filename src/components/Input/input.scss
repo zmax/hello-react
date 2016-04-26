@@ -1,0 +1,14 @@
+textarea {
+  &:focus {
+    outline:none;
+  }
+}
+
+input {
+  min-height: 32px;
+  padding: 5px;
+
+  &:focus {
+    outline: none;
+  }
+}

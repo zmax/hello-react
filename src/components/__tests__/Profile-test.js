@@ -13,7 +13,7 @@ describe('<Profile />', () => {
 
     var profile = TestUtils.renderIntoDocument(<Profile userId="5" />);
     var node = ReactDOM.findDOMNode(profile);
-    expect(node.textContent).toEqual('Hello');
+    expect(node.textContent).toEqual('Loading...');
 
     return profile.getData().then( user => {
       expect(user.name).toEqual('Paul');

@@ -4,26 +4,27 @@ This is just my personal boilerplate, it may or may not be a good fit for your p
 
 ### Contains:
 
-- [x] Babel
-- [x] Webpack with hot-loader
-- [x] React
-- [x] Jest
-- [x] Style loader (Sass)
-- [x] Enzyme <del>or teaspoon</del>
+- [x] [Babel](https://babeljs.io/)
+- [x] [Webpack](https://github.com/webpack/webpack) with [HMR](http://webpack.github.io/docs/hot-module-replacement-with-webpack.html) (hot-reloading)
+- [x] [React](https://facebook.github.io/react/)
+- [x] Style loader ([Sass](https://github.com/jtangelder/sass-loader))
+- [x] [Jest](https://github.com/facebook/jest) + [Enzyme](https://github.com/airbnb/enzyme) <del>or teaspoon</del>
+- [x] Redux and Router
+- [ ] Server Rendering
 
 <hr/>
 
-#### Using webpack to bundle scripts
+#### Packages Installation
 
 ```
 npm install
 ```
 or
 ```
-npm install --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-react babel-preset-es2015 style-loader css-loader  node-sass sass-loader extract-text-webpack-plugin
+npm install --save-dev webpack webpack-dev-server babel-loader babel-core babel-preset-react babel-preset-es2015 style-loader css-loader node-sass sass-loader extract-text-webpack-plugin
 ```
 
-#### Build scripts
+#### Production Build
 
 ```
 npm run build
@@ -38,10 +39,28 @@ npm run dev
 Then, open your browser on `http://localhost:8888/`
 
 
-#### Unit Testing
+#### Redux and Router
 
-Dependencies: `jest-cli babl-polyfill react-addons-test-utils enzyme sinon`
+###### Dependencies:
+
+- redux
+- react-redux
+- react-router-redux
+- redux-devtools
+- redux-devtools-dock-monitor
+- redux-devtools-log-monitor
+
+
+#### Unit Testing
 
 ```
 npm test
 ```
+
+###### Dependencies:
+
+- jest-cli
+- babl-polyfill
+- react-addons-test-utils
+- enzyme
+- sinon
