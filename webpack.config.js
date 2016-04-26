@@ -61,6 +61,12 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     // 若有語法錯誤時不重新整理瀏覽器
     new webpack.NoErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('development')
+      },
+      '__DEV__': true
+    }),
     new ExtractTextPlugin("app.css")
   ]
 };

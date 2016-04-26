@@ -9,7 +9,7 @@ This is just my personal boilerplate, it may or may not be a good fit for your p
 - [x] [React](https://facebook.github.io/react/)
 - [x] Style loader ([Sass](https://github.com/jtangelder/sass-loader))
 - [x] [Jest](https://github.com/facebook/jest) + [Enzyme](https://github.com/airbnb/enzyme) <del>or teaspoon</del>
-- [x] Redux and Router
+- [x] [Redux](https://github.com/reactjs/redux) and [Router](https://github.com/reactjs/react-router-redux)
 - [ ] Server Rendering
 
 <hr/>

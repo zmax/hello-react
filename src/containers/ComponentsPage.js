@@ -4,8 +4,7 @@ import LikeButton from 'components/LikeButton';
 import Profile from 'components/Profile';
 import {Li, Ul} from 'components/List';
 
-export default function(p1,p2) {
-  console.log(p1,p2);
+export default function(props) {  
   return <div>
     <HelloWorld />
     {/*<br/><hr/>*/}

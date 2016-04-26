@@ -2,10 +2,16 @@ import '../../utils/object';
 
 jest.unmock('../../utils/object');
 jest.unmock('../index.js');
+jest.unmock('../../constants/ActionTypes');
+jest.unmock('../../constants/FilterTypes');
+
+import * as VisibilityFilters from '../../constants/FilterTypes';
+import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER } from '../../constants/ActionTypes';
 
 describe('actions test', () => {
   it('should have addTodo action', () => {
-    const { addTodo, ADD_TODO } = require('../index.js');
+    const { addTodo } = require('../index.js');
+    // const { ADD_TODO } = require('../../constants/ActionTypes');
     expect(addTodo).toBeDefined();
     expect(addTodo('Foo')).toEqual({
       type: ADD_TODO,
@@ -13,7 +19,8 @@ describe('actions test', () => {
     });
   });
   it('should have completeTodo action', () => {
-    const { completeTodo, COMPLETE_TODO } = require('../index.js');
+    const { completeTodo } = require('../index.js');
+    // const { COMPLETE_TODO } = require('../../constants/ActionTypes');
     expect(completeTodo).toBeDefined();
     expect(completeTodo(1)).toEqual({
       type: COMPLETE_TODO,
@@ -21,7 +28,8 @@ describe('actions test', () => {
     });
   });
   it('should have setVisibilityFilter action, and three filters', () => {
-    const { setVisibilityFilter, SET_VISIBILITY_FILTER, VisibilityFilters} = require('../index.js');
+    const { setVisibilityFilter } = require('../index.js');
+    // const { SET_VISIBILITY_FILTER } = require('../../constants/ActionTypes');
     expect(setVisibilityFilter).toBeDefined();
     expect(setVisibilityFilter(VisibilityFilters.SHOW_ALL)).toEqual({
       type: SET_VISIBILITY_FILTER,

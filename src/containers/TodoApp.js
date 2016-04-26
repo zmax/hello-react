@@ -4,8 +4,10 @@ import TodoList, {AddTodo, TodoFilter} from '../components/TodoList';
 // import * as actions from '../actions';
 
 import {
-  addTodo, completeTodo, setVisibilityFilter, VisibilityFilters
+  addTodo, completeTodo, setVisibilityFilter
 } from '../actions';
+
+import * as VisibilityFilters from '../constants/FilterTypes';
 
 /**
  * TodoApp

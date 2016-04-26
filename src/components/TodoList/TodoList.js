@@ -15,8 +15,8 @@ export default class TodoList extends Component {
         <Ul>
           {this.props.todos.map(
             (todo, index) =>
-              <Li key={index}>
-                <Todo key={index} text={todo.text} completed={todo.completed}
+              <Li key={todo.index}>
+                <Todo key={todo.index} text={todo.text} completed={todo.completed}
                   onClick={(e)=>this.props.onTodoClick(e, todo.index)} />
               </Li>
           )}

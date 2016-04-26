@@ -1,10 +1,14 @@
 import '../../utils/object';
-
+// reducers
 jest.unmock('../index');
-jest.unmock('redux');
+jest.unmock('../todos');
+jest.unmock('../visibilityFilter');
+// actions
 jest.unmock('../../actions');
 
-import todoApp, { visibilityFilter, todos } from '../index';
+import { combineReducers } from 'redux';
+import {todos, visibilityFilter} from '../index';
+
 import {
   addTodo,
   completeTodo,
@@ -12,6 +16,14 @@ import {
 } from '../../actions';
 
 describe('reducers test', () => {
+
+  let todoApp;
+  beforeEach(() => {
+    todoApp = combineReducers({
+      todos,
+      visibilityFilter
+    });
+  });
 
   it("have two reducers", () => {
     let state = todoApp();

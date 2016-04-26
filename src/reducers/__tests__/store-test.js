@@ -1,16 +1,25 @@
+// jest.unmock('redux');
 jest.unmock('../index');
+// reducers
+jest.unmock('../todos');
+jest.unmock('../visibilityFilter');
+// actions
 jest.unmock('../../actions');
 
-import { createStore } from 'redux';
-import todoApp from '../index';
+import { combineReducers, createStore } from 'redux';
+import { todos, visibilityFilter } from '../index';
 import { addTodo } from '../../actions';
 
 describe("store test", () => {
 
   const defaultState = { todos: [], visibilityFilter: "SHOW_ALL" };
 
-  let store;
+  let todoApp, store;
   beforeEach( () => {
+    todoApp = combineReducers({
+      todos,
+      visibilityFilter
+    });
     store = createStore(todoApp);
   });
 

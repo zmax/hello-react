@@ -1,30 +1,16 @@
-/*
- * Action 類型
- */
-export const ADD_TODO = 'ADD_TODO';
-export const COMPLETE_TODO = 'COMPLETE_TODO';
-export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
-
-/*
- * 顯示過濾
- */
-export const VisibilityFilters = {
-  SHOW_ALL: 'SHOW_ALL',
-  SHOW_COMPLETED: 'SHOW_COMPLETED',
-  SHOW_ACTIVE: 'SHOW_ACTIVE'
-};
+import * as types from '../constants/ActionTypes';
 
 /*
  * Actions
  */
 export function addTodo(text) {
-  return { type: ADD_TODO, text };
+  return { type: types.ADD_TODO, text };
 }
 
 export function completeTodo(index) {
-  return { type: COMPLETE_TODO, index };
+  return { type: types.COMPLETE_TODO, index };
 }
 
 export function setVisibilityFilter(filter) {
-  return { type: SET_VISIBILITY_FILTER, filter };
+  return { type: types.SET_VISIBILITY_FILTER, filter };
 }
