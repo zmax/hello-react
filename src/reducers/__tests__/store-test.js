@@ -28,7 +28,7 @@ describe("store test", () => {
     //   { text: "Foo", completed: false }
     // ], visibilityFilter: "SHOW_ALL"});
     expect(store.getState()).toEqual(
-      Object.assign({}, defaultState, { todos: [{ text: "Foo", completed: false }] })
+      Object.assign({}, defaultState, { todos: [{ index:0, text: "Foo", completed: false }] })
     );
   });
 

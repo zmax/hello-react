@@ -8,7 +8,6 @@ import todoApp, { visibilityFilter, todos } from '../index';
 import {
   addTodo,
   completeTodo,
-  uncompleteTodo,
   setVisibilityFilter
 } from '../../actions';
 
@@ -28,6 +27,7 @@ describe('reducers test', () => {
     state = todoApp(state, addTodo('Foo'));
     expect(state.todos).toEqual([
       {
+        index: 0,
         text: 'Foo',
         completed: false
       }
@@ -42,29 +42,35 @@ describe('reducers test', () => {
     state = todoApp(state, completeTodo(1));
     expect(state.todos).toEqual([
       {
+        index: 0,
         text: "Foo",
         completed: false
       },
       {
+        index: 1,
         text: "Baz",
         completed: true
       },
       {
+        index: 2,
         text: "Qux",
         completed: false
       }
     ]);
-    state = todoApp(state, uncompleteTodo(1));
+    state = todoApp(state, completeTodo(1));
     expect(state.todos).toEqual([
       {
+        index: 0,
         text: "Foo",
         completed: false
       },
       {
+        index: 1,
         text: "Baz",
         completed: false
       },
       {
+        index: 2,
         text: "Qux",
         completed: false
       }
