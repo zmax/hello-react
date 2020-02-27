@@ -43,7 +43,7 @@
   "homepage": "https://github.com/zmax/hello-react#readme",
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "jquery": "^1.12.3"
+    "jquery": "^3.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.7.6",
